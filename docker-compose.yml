@@ -1,7 +1,8 @@
-version: "3.3"
+version: "3"
 services:
   notea:
-    container_name: Notea
+    image: "diamkil/notea:latest"
+    container_name: arakkk-notea
     ports:
       - "3000:3011"
       - "9000:9011"                # <Host>:<Container>
@@ -11,4 +12,13 @@ services:
       - STORE_PASSWORD=k0usuk30922
     volumes:
       - "/important_files/notea:/data"
-    image: "diamkil/notea:latest"
+    networks:
+    - container-link
+
+networks:
+  default:
+    external:
+      name: bridge
+  container-link:
+    external:
+      name: container_network
