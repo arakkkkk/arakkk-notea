@@ -10,20 +10,9 @@ services:
       - PASSWORD=k0usuk30922
       - STORE_USER=arakkk
       - STORE_PASSWORD=k0usuk30922
-    volumes:
-      - "/important_files/notea:/data"
-    networks:
-    - container-link
     logging:
       driver: "json-file"
       options:
         max-size: "1k"
         max-file: "10"
 
-networks:
-  default:
-    external:
-      name: bridge
-  container-link:
-    external:
-      name: container_network
