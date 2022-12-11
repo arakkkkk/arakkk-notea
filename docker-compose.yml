@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  notea:
+    container_name: Notea
+    ports:
+      - "3000:3011"
+      - "9000:9011"                # <Host>:<Container>
+    environment:
+      - PASSWORD=k0usuk30922
+      - STORE_USER=arakkk
+      - STORE_PASSWORD=k0usuk30922
+    volumes:
+      - "/important_files/notea:/data"
+    image: "diamkil/notea:latest"
