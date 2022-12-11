@@ -4,8 +4,8 @@ services:
     image: "diamkil/notea:latest"
     container_name: arakkk-notea
     ports:
-      - "3000:3011"
-      - "9000:9011"                # <Host>:<Container>
+      - "3011:3000"
+      - "9011:9000"                # <Host>:<Container>
     environment:
       - PASSWORD=k0usuk30922
       - STORE_USER=arakkk
